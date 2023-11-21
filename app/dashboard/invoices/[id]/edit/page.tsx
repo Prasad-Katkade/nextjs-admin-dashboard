@@ -9,7 +9,13 @@ export default async function Page({ params }: { params: { id: string } }) {
     fetchInvoiceById(id),
     fetchCustomers(),
   ]);
-  const invoiceData:InvoiceForm=invoice;
+  const prevState: InvoiceForm = {
+    id: "",
+    customer_id: "",
+    amount: 0,
+    status: "pending",
+  };
+  const invoiceData: InvoiceForm = invoice || prevState;
   return (
     <main>
       <Breadcrumbs

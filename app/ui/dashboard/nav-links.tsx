@@ -22,6 +22,7 @@ const links = [
   { name: "Customers", href: "/dashboard/customers", icon: UserGroupIcon },
 ];
 
+// Array of colors & themes these values can come from API's
 const themes = [
   { name: "blue", color: "#2589FE" },
   { name: "red", color: "#e74c3c" },
@@ -33,10 +34,10 @@ export default function NavLinks() {
   const [theme, setTheme] = useState<string>("#2589FE");
   let root: any;
   if (typeof window !== "undefined") {
-    root = document.documentElement;
+    root = document.documentElement; // we have to make sure component is rendered first
   }
   useEffect(()=>{
-    root.style.setProperty("--color-fill", theme)
+    root.style.setProperty("--color-fill", theme) // updating css variables, created in global.css 
   },[theme])
   return (
     <>
@@ -75,7 +76,7 @@ export default function NavLinks() {
                 { "outline outline-offset-4": ele.color === theme }
               )}
               onClick={() => {
-                setTheme(ele.color);
+                setTheme(ele.color); // setting the color for theme
               }}
             />
           );

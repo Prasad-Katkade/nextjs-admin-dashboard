@@ -21,7 +21,7 @@ const config: Config = {
       },
       backgroundColor:{
         primary:{
-          base: 'var( --color-fill)'
+          base: 'var( --color-fill)' // referencing the css variables and using it in components eg. bg-primary-base
         }
       }
     },

@@ -5,8 +5,9 @@
 
 @layer base{
   :root{
-    --color-fill: #2589FE;
+    --color-fill: #2589FE; 
   }
+  /* creating css variables and using it in tailwind.config*/
 }
 
 

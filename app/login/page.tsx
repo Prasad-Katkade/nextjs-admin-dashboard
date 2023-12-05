@@ -1,6 +1,8 @@
 import AcmeLogo from "@/app/ui/acme-logo";
 import LoginForm from "@/app/ui/login-form";
 import { Metadata } from "next";
+import "./styles.css";
+import { KeyIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -16,6 +18,17 @@ export default function LoginPage() {
           </div>
         </div>
         <LoginForm />
+        <div className="flex justify-center">
+          <div className="parent">
+            Email - user@nextmail.com <br />
+            Pass- 123456
+            <div className="child">
+              <div className="bg-white rounded-full h-8 w-8 flex justify-center align-middle content-center">
+                <KeyIcon className="h-6 w-6 text-yellow-800" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );

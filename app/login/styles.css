@@ -1,0 +1,28 @@
+.parent {
+  position: relative;
+  height: 100px;
+  width: 300px;
+  background-color: whitesmoke;
+  display: flex;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    #9c6c34,
+    #a8763e 10px,
+    #9d741a 10px,
+    #9d741a 20px
+  );
+  outline: 5px solid #9c6c34;
+  position: absolute;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent:hover .child {
+  transform: translateX(-350px); /* Adjust the value based on your preference */
+}
